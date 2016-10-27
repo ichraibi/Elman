@@ -11,10 +11,14 @@
 # -----------------------------------------------------------------------------
 import numpy as np
 import networkx as nx
-import matplotlib.pyplot as plt
-from random import randint
+from ExportDataClass import ExportData
 import random
 import sys
+"""
+line to launch the script :
+python elmanServanSchreiberEtAl.py 100-200-1000 50 3-15 0.01-0.015-0.02 0.1-0.5-0.7-0.9
+
+"""
 
 
 
@@ -46,30 +50,6 @@ def generate_sequences(n=100, debug=False):
     return sequences
 
 
-def generateSequence(G, edge_labels):
-
-    aSequence = []
-    aSequence.append("B")
-
-    CurrentNode = "0"
-    while (CurrentNode<>"5"):
-        #we get the neighbors of the currentNode
-        ListNeighbors = G.neighbors(CurrentNode)
-        UpdatedSequence= False
-        while (UpdatedSequence==False):
-            #we pick randomly one neighbor
-            aNeighbor = random.choice(ListNeighbors)
-            #we check if the edge (currentNode-neighbor) respect the grammar
-            if (CurrentNode, aNeighbor) in G.edges():
-                aSequence.append(edge_labels[(CurrentNode, aNeighbor)])
-                CurrentNode= aNeighbor
-                UpdatedSequence = True
-
-    if CurrentNode == "5":
-        aSequence.append("E")
-
-
-    return aSequence
 
 def generateRandomSequence(ListNeighbors):
 
@@ -128,7 +108,7 @@ def pstdev(data):
     pvar = ss/n # the population variance
     return pvar**0.5
 
-def analyseGrammaticalStructureOfSequences(network, sequences, LettersDict):
+def analyseGrammaticalStructureOfSequences(data, index_data, network, sequences, LettersDict):
 
     nbNonGrammaticalSequence = 0
     past = []
@@ -168,10 +148,13 @@ def analyseGrammaticalStructureOfSequences(network, sequences, LettersDict):
 
     NonGrammaticalSequencesPercent = float(nbNonGrammaticalSequence) / float(len(sequences))
     GrammaticalSequencesPercent = 1- NonGrammaticalSequencesPercent
+    data[index_data]["nbAcceptedSeq"]= (GrammaticalSequencesPercent*100)
+    data[index_data]["nbRejectedSeq"]= (NonGrammaticalSequencesPercent*100)
+
     print "\nPourcentage of grammatical sequences: ", (GrammaticalSequencesPercent*100), " %"
     print "Pourcentage of non grammatical sequences : ", (NonGrammaticalSequencesPercent*100), " %"
 
-
+    return data
 
 def getEdgeBylabel(G, edge_label, edges_labels):
 
@@ -279,14 +262,13 @@ def create_dictLettersWithBinaryValues(LetterList):
         currentLetter = LetterList[i]
         ABinaryLetter = []
         for aletter in LetterList:
-            # print " --> : ", aletter
+
             if aletter == currentLetter:
                 ABinaryLetter.append(1)
             else:
                 ABinaryLetter.append(0)
 
         LettersDict[currentLetter] = ABinaryLetter
-        #print "currentLetter : ", currentLetter, " => ", ABinaryLetter
 
         i = i + 1
 
@@ -295,9 +277,6 @@ def create_dictLettersWithBinaryValues(LetterList):
         foundLetter = ""
         foundLetter = getLetterByBinaryValue(LettersDict,value)
 
-        print key, " - ", value, " --> ", foundLetter
-
-    #quit()
     return LettersDict
 
 
@@ -408,7 +387,7 @@ class Elman:
         # Return output
         return self.layers[-1]
 
-    def propagate_backward(self, target, lrate=0.01, momentum=0.01):
+    def propagate_backward(self, target, lrate=0.01, momentum=0.5):
         ''' Back propagate error related to target using lrate. '''
 
         deltas = []
@@ -438,6 +417,82 @@ class Elman:
 
 
 
+def elmanAnalysis(data,index_data, sequences ,window, nbNeuronHiddenLayer,learningRate, momentum):
+
+
+
+    print "\n\nGeneration of samples & LEARNING ...."
+
+    samples = np.zeros(nbSamples,
+                       dtype=[('input', float, 7), ('output', float, 7)])
+    network = Elman(7, nbNeuronHiddenLayer, 7)
+    errors = []
+    mean_error = []
+    index = 0
+    nbNonGrammaticalSequence = 0
+    for i in range(len(sequences)):
+        # print " i :", i,
+        # index = i % len(sequences)
+
+        sequence = sequences[i]
+        # print " -sequence : ", sequence
+        # print "\nreset_activity_HiddenLayer : "
+        network.reset_activity_ContextUnits()
+
+        for j in range(len(sequence) - 1):
+            # print " - j ", sequence[j], " -> ", sequence[j + 1]
+            # print " -> index : ", index
+            samples[index] = LettersDict[sequence[j]], LettersDict[sequence[j + 1]]
+            sample = samples[index]
+            index += 1
+
+            if (sample['input']).max() == 0 or (sample['output']).max() == 0:
+                print "ERROR : index ", index
+                print  sample
+                quit()
+
+            # print "sample : ", sample
+            o = network.propagate_forward(sample['input'])
+            error = network.propagate_backward(sample['output'], learningRate, momentum)  # the actual successor
+            # print "error : ", error
+            errors.append(error)
+            mean_error.append(np.mean(errors[-window:]))
+
+            if sequence[j + 1] == "E":
+                break
+
+    print "Total number of samples : ", nbSamples
+
+    data[index_data]['nbsamples'] = nbSamples
+    # print "len(samples): ", len(samples)
+    # print "samples.size : ", samples.size
+    # print "Generation of ", nbSamples, " samples done !"
+
+    plt.clf()
+
+    plt.plot(mean_error)
+    plt.title('Elman neural network:\nevolution of the error during learning process')
+
+    plt.xlabel('Samples')
+
+    plt.ylabel('error')
+    plt.gca().set_position((.1, .3, .8, .6))  # to make a bit of room for extra text
+    plt.figtext(.05, .05, '\nNumber of sequences : ' + str(NumberOfSequences) + '\nNumber of samples : ' + str(
+        nbSamples) + '\nAverage of the error every ' + str(window) + ' results')
+
+    plt.savefig("NetworkRes_NbSeq" + str(NumberOfSequences) + "-Win" + str(window) + ".png")  # save as png
+    #plt.show()
+
+    listNetworkResult = []
+    listGrammaticalSequencesResult = []
+    nbNonGrammaticalSequence = 0
+
+    print "\n\nAnalyse the grammatical structure of ", NumberOfSequences, " sequences "
+    data = analyseGrammaticalStructureOfSequences(data, index_data, network, sequences, LettersDict)
+
+    return data
+
+
 # -----------------------------------------------------------------------------
 if __name__ == '__main__':
     import matplotlib
@@ -449,121 +504,84 @@ if __name__ == '__main__':
         #SequenceSize = 6 #it need to be an even number (un chiffre pair)
         NumberOfSequences = 100
         window = 10
-        #print "Size of sequence: ",SequenceSize
-        print "Number of sequences : ", NumberOfSequences
-        print "Window of average computation: ", window
-         
+        nbNeuronHiddenLayer = 3
+        learningRate= 0.01
+        momentum = 0.01
+
     else:
         print "\nParameters :"
         #SequenceSize = int(sys.argv[1]) #it need to be an even number (un chiffre pair)
-        NumberOfSequences = int(sys.argv[1])
-        window = int(sys.argv[2])
-        #print "Size of sequence: ",SequenceSize
-        print "Number of sequences : ", NumberOfSequences
-        print "Window of average computation: ", window
+        listNumberOfSequences = sys.argv[1].split("-")
+        listwindows = sys.argv[2].split("-")
+        listnbNeuronHiddenLayer = sys.argv[3].split("-")
+        listlearningRate= sys.argv[4].split("-")
+        listmomentum = sys.argv[5].split("-")
 
 
-    #G = createFiniteStateGrammar89()
+
+    print "List of all the parameters : "
+    print "List of Number of sequences : ", listNumberOfSequences
+    print "List of Window of average computation: ", listwindows
+    print "List of Number of neurons in the hidden layer: ", listnbNeuronHiddenLayer
+    print "List of Learning rate : ", listlearningRate
+    print "List of Momentum : ", listmomentum
+
+    parameters=[]
+    parameters.append(listNumberOfSequences)
+    parameters.append(listwindows)
+    parameters.append(listnbNeuronHiddenLayer)
+    parameters.append(listlearningRate)
+    parameters.append(listmomentum)
 
     LettersDict = {}
     LettersList = ["B", "T", "S", "X", "V", "P", "E"]
-
-    LettersDict= create_dictLettersWithBinaryValues(LettersList)
+    LettersDict = create_dictLettersWithBinaryValues(LettersList)
     print "\n Letters list : "
     for aLetter in LettersList:
         print aLetter, "-->", LettersDict[aLetter]
 
+    data = {}
+    index_data = 0
 
-    print "\n\nGeneration of the sequences for TRAINING ..."
-    #edge_labels = nx.get_edge_attributes(G,'name')
-    
-    numSeq=0
-    randomSequences = []
-    nbSamples=0
-    LenSequences = []
-    sequences = generate_sequences(n=NumberOfSequences)
+    for NumberOfSequences in listNumberOfSequences:
 
-    while numSeq<len(sequences):
-        sequence = sequences[numSeq]
-        LenSequences.append(len(sequence))
-        nbSamples += len(sequence)-1
-        numSeq += 1
+        print "\n\nGeneration of the sequences for TRAINING ..."
+        # edge_labels = nx.get_edge_attributes(G,'name')
+        numSeq = 0
+        randomSequences = []
+        nbSamples = 0
+        LenSequences = []
+        sequences = generate_sequences(n=int(NumberOfSequences))
 
-    print "Generation of ", NumberOfSequences, " sequences done !"
-    print " --> The average len is : ", mean(LenSequences)
-    print " --> The standard deviation is : ", pstdev(LenSequences)
+        while numSeq < len(sequences):
+            sequence = sequences[numSeq]
+            LenSequences.append(len(sequence))
+            nbSamples += len(sequence) - 1
+            numSeq += 1
 
+        print "Generation of ", NumberOfSequences, " sequences done !"
+        print " --> The average len is : ", mean(LenSequences)
+        print " --> The standard deviation is : ", pstdev(LenSequences)
 
-    print "\n\nGeneration of samples & LEARNING ...."
+        for window in listwindows:
+            for nbNeuronHiddenLayer in listnbNeuronHiddenLayer:
+                for learningRate in listlearningRate:
+                    for momentum in listmomentum:
+                        print "\n\nNumber of sequences : ", NumberOfSequences
+                        print "Window of average computation: ", window
+                        print "Number of neurons in the hidden layer: ", nbNeuronHiddenLayer
+                        print "Learning rate : ", learningRate
+                        print "Momentum : ", momentum
 
-    samples = np.zeros(nbSamples,
-                       dtype=[('input', float, 7), ('output', float, 7)])
-    network = Elman(7, 3, 7)
-    errors = []
-    mean_error = []
-    index =0
-    nbNonGrammaticalSequence=0
-    for i in range(len(sequences)):
-        #print " i :", i,
-        #index = i % len(sequences)
+                        data[index_data] = {'NumberOfSequences': NumberOfSequences,'window':window, 'nbNeuronHiddenLayer':nbNeuronHiddenLayer,'learningRate':learningRate, 'momentum':momentum }
+                        data[index_data]["meanSeq"] = mean(LenSequences)
+                        data[index_data]["pstdevSeq"] = pstdev(LenSequences)
+                        data = elmanAnalysis(data,index_data, sequences, int(window), int(nbNeuronHiddenLayer), float(learningRate), float(momentum))
+                        index_data+=1
 
-        sequence= sequences[i]
-        #print " -sequence : ", sequence
-        #print "\nreset_activity_HiddenLayer : "
-        network.reset_activity_ContextUnits()
-
-        for j in range(len(sequence)-1):
-            #print " - j ", sequence[j], " -> ", sequence[j + 1]
-            #print " -> index : ", index
-            samples[index] = LettersDict[sequence[j]], LettersDict[sequence[j + 1]]
-            sample = samples[index]
-            index +=1
-
-            if (sample['input']).max() == 0 or (sample['output']).max() == 0:
-                print "ERROR : index ", index
-                print  sample
-                quit()
-
-            #print "sample : ", sample
-            o= network.propagate_forward(sample['input'])
-            error = network.propagate_backward(sample['output'])#the actual successor
-            # print "error : ", error
-            errors.append(error)
-            mean_error.append(np.mean(errors[-window:]))
-
-
-            if sequence[j + 1] == "E":
-                break
-
-
-    print "Total number of samples : ", nbSamples
-    #print "len(samples): ", len(samples)
-    #print "samples.size : ", samples.size
-    #print "Generation of ", nbSamples, " samples done !"
-
-    plt.clf()
-
-    plt.plot(mean_error)
-    plt.title('Elman neural network:\nevolution of the error during learning process')
-
-    plt.xlabel('Samples')
-
-    plt.ylabel('error')
-    plt.gca().set_position((.1, .3, .8, .6))  # to make a bit of room for extra text
-    plt.figtext(.05, .05, '\nNumber of sequences : ' + str(NumberOfSequences) + '\nNumber of samples : ' + str(nbSamples) + '\nAverage of the error every ' + str(window) + ' results')
-
-    plt.savefig("NetworkRes_NbSeq" + str(NumberOfSequences) + "-Win" + str(window) + ".png")  # save as png
-    plt.show()
-
-
-    listNetworkResult = []
-    listGrammaticalSequencesResult = []
-    nbNonGrammaticalSequence = 0
-
-    print "\n\nAnalyse the grammatical structure of ",NumberOfSequences," sequences "
-    analyseGrammaticalStructureOfSequences(network, sequences, LettersDict)
-
-    #quit()
+    DataToExport = ExportData()
+    DataToExport.export(data, parameters)
+    quit()
 
     print "\n\nNetwork analysis for 20 000 sequences.... "#-------------------------------------------------------------------
 
