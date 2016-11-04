@@ -137,7 +137,7 @@ def generate_sequences(n=100, length=20, debug=False):
             choices = grammar[index]
             choice = np.random.randint(0, len(choices))
             token, index = choices[choice]
-            print "token : ", token, " - index : ", index
+            #print "token : ", token, " - index : ", index
             sequence += token
         if debug:
             print(sequence)

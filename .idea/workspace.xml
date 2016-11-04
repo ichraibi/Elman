@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f96ce3cd-09a3-4814-9127-eb07f102080d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elmanServanSchreiberEtAl.py" afterPath="$PROJECT_DIR$/elmanServanSchreiberEtAl.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20161027_DataExtraction.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20161027_DataExtraction100_200_1000.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetworkRes_NbSeq100-Win50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetworkRes_NbSeq20000-Win50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetworkRes_NbSeq200000-Win50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetworkRes_NbSeq60000-Win50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/elmanServanSchreiberEtAl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$20161027_DataExtraction.xlsx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExportDataClass.py" afterPath="$PROJECT_DIR$/ExportDataClass.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar.py" afterPath="$PROJECT_DIR$/grammar.py" />
     </list>
     <ignored path="Elman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,69 +32,33 @@
     <favorites_list name="Elman" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="elmanServanSchreiberEtAl.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/elmanServanSchreiberEtAl.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="grammar.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#504#522#0" expanded="true" />
-                <element signature="e#1086#1239#0" expanded="false" />
-                <element signature="e#1585#1736#0" expanded="false" />
-                <element signature="e#1996#2388#0" expanded="false" />
-                <element signature="e#2075#2388#0" expanded="false" />
-                <element signature="e#2434#2647#0" expanded="false" />
-                <element signature="e#2817#3053#0" expanded="false" />
-                <element signature="e#3514#3563#0" expanded="false" />
-                <element signature="e#3726#4152#1" expanded="false" />
-                <element signature="e#4435#4484#0" expanded="false" />
-                <element signature="e#5125#5279#0" expanded="false" />
-                <element signature="e#5173#5259#0" expanded="false" />
-                <element signature="e#5225#5259#0" expanded="false" />
-                <element signature="e#5367#5455#0" expanded="false" />
-                <element signature="e#5391#5455#0" expanded="false" />
-                <element signature="e#5536#5813#0" expanded="false" />
-                <element signature="e#5618#5761#0" expanded="false" />
-                <element signature="e#5618#5634#0" expanded="false" />
-                <element signature="e#5716#5755#0" expanded="false" />
-                <element signature="e#6049#6415#0" expanded="false" />
-                <element signature="e#6095#6415#0" expanded="false" />
-                <element signature="e#6192#6250#0" expanded="false" />
-                <element signature="e#6477#7583#0" expanded="false" />
-                <element signature="e#7643#8240#0" expanded="false" />
-                <element signature="e#7776#8078#0" expanded="false" />
-                <element signature="e#7881#8007#0" expanded="false" />
-                <element signature="e#8136#8216#0" expanded="false" />
-                <element signature="e#8264#8326#0" expanded="false" />
-                <element signature="e#8350#8405#0" expanded="false" />
-                <element signature="e#8425#12269#0" expanded="false" />
-                <element signature="e#8487#9504#0" expanded="false" />
-                <element signature="e#8654#8697#0" expanded="false" />
-                <element signature="e#8878#8987#0" expanded="false" />
-                <element signature="e#9174#9291#0" expanded="false" />
-                <element signature="e#9204#9288#0" expanded="false" />
-                <element signature="e#9543#9716#0" expanded="false" />
-                <element signature="e#9620#9716#0" expanded="false" />
-                <element signature="e#9770#10487#0" expanded="false" />
-                <element signature="e#9770#9798#0" expanded="false" />
-                <element signature="e#10041#10487#0" expanded="false" />
-                <element signature="e#10072#10096#0" expanded="false" />
-                <element signature="e#10528#10753#0" expanded="false" />
-                <element signature="e#10802#11367#0" expanded="false" />
-                <element signature="e#11048#11099#0" expanded="false" />
-                <element signature="e#11189#11311#0" expanded="false" />
-                <element signature="e#11445#12269#0" expanded="false" />
-                <element signature="e#11789#11919#0" expanded="false" />
-                <element signature="e#12001#12213#0" expanded="false" />
-                <element signature="e#12996#13049#0" expanded="false" />
-                <element signature="e#15153#15429#0" expanded="false" />
-                <element signature="e#15197#15220#0" expanded="false" />
-                <element signature="e#15449#15812#0" expanded="false" />
-                <element signature="e#18905#19035#0" expanded="false" />
-                <element signature="e#19384#20666#1" expanded="false" />
-              </folding>
+            <state relative-caret-position="522">
+              <caret line="169" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elmanServanSchreiberEtAl.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/elman89/elmanServanSchreiberEtAl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7185">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elmanClearmansEtMcclelland91.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elman91/elmanClearmansEtMcclelland91.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3045">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,8 +66,8 @@
       <file leaf-file-name="ExportDataClass.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExportDataClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
-              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
               </folding>
@@ -103,11 +77,17 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -129,15 +109,18 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ExportData.py" />
         <option value="$PROJECT_DIR$/ExportDataClass.py" />
+        <option value="$PROJECT_DIR$/grammar.py" />
+        <option value="$PROJECT_DIR$/elmanClearmansEtMcclelland91.py" />
         <option value="$PROJECT_DIR$/elmanServanSchreiberEtAl.py" />
+        <option value="$PROJECT_DIR$/SemanticGraph.py" />
+        <option value="$PROJECT_DIR$/elman89/elmanServanSchreiberEtAl.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -164,6 +147,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,16 +169,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elman91" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elman89" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BitBucket/GraphXMLParsePDF/KnowledgeExtraction_CodeFiles" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -346,46 +366,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="23" width="1440" height="812" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20295984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8986111" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3983287" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8986111" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -403,17 +404,65 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/elmanServanSchreiberEtAl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elmanClearmansEtMcclelland91.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6315">
+          <caret line="425" column="4" selection-start-line="425" selection-start-column="4" selection-end-line="425" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExportDataClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
+        <state relative-caret-position="90">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="e#45#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elmanServanSchreiberEtAl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExportDataClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
@@ -421,67 +470,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elmanServanSchreiberEtAl.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NetworkRes_NbSeq200000-Win50.png" />
+    <entry file="file://$PROJECT_DIR$/NetworkRes_NbSeq60000-Win50.png" />
+    <entry file="file://$PROJECT_DIR$/NetworkRes_NbSeq20000-Win50.png" />
+    <entry file="file://$PROJECT_DIR$/ExportDataClass.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#504#522#0" expanded="true" />
-            <element signature="e#1086#1239#0" expanded="false" />
-            <element signature="e#1585#1736#0" expanded="false" />
-            <element signature="e#1996#2388#0" expanded="false" />
-            <element signature="e#2075#2388#0" expanded="false" />
-            <element signature="e#2434#2647#0" expanded="false" />
-            <element signature="e#2817#3053#0" expanded="false" />
-            <element signature="e#3514#3563#0" expanded="false" />
-            <element signature="e#3726#4152#1" expanded="false" />
-            <element signature="e#4435#4484#0" expanded="false" />
-            <element signature="e#5125#5279#0" expanded="false" />
-            <element signature="e#5173#5259#0" expanded="false" />
-            <element signature="e#5225#5259#0" expanded="false" />
-            <element signature="e#5367#5455#0" expanded="false" />
-            <element signature="e#5391#5455#0" expanded="false" />
-            <element signature="e#5536#5813#0" expanded="false" />
-            <element signature="e#5618#5761#0" expanded="false" />
-            <element signature="e#5618#5634#0" expanded="false" />
-            <element signature="e#5716#5755#0" expanded="false" />
-            <element signature="e#6049#6415#0" expanded="false" />
-            <element signature="e#6095#6415#0" expanded="false" />
-            <element signature="e#6192#6250#0" expanded="false" />
-            <element signature="e#6477#7583#0" expanded="false" />
-            <element signature="e#7643#8240#0" expanded="false" />
-            <element signature="e#7776#8078#0" expanded="false" />
-            <element signature="e#7881#8007#0" expanded="false" />
-            <element signature="e#8136#8216#0" expanded="false" />
-            <element signature="e#8264#8326#0" expanded="false" />
-            <element signature="e#8350#8405#0" expanded="false" />
-            <element signature="e#8425#12269#0" expanded="false" />
-            <element signature="e#8487#9504#0" expanded="false" />
-            <element signature="e#8654#8697#0" expanded="false" />
-            <element signature="e#8878#8987#0" expanded="false" />
-            <element signature="e#9174#9291#0" expanded="false" />
-            <element signature="e#9204#9288#0" expanded="false" />
-            <element signature="e#9543#9716#0" expanded="false" />
-            <element signature="e#9620#9716#0" expanded="false" />
-            <element signature="e#9770#10487#0" expanded="false" />
-            <element signature="e#9770#9798#0" expanded="false" />
-            <element signature="e#10041#10487#0" expanded="false" />
-            <element signature="e#10072#10096#0" expanded="false" />
-            <element signature="e#10528#10753#0" expanded="false" />
-            <element signature="e#10802#11367#0" expanded="false" />
-            <element signature="e#11048#11099#0" expanded="false" />
-            <element signature="e#11189#11311#0" expanded="false" />
-            <element signature="e#11445#12269#0" expanded="false" />
-            <element signature="e#11789#11919#0" expanded="false" />
-            <element signature="e#12001#12213#0" expanded="false" />
-            <element signature="e#12996#13049#0" expanded="false" />
-            <element signature="e#15153#15429#0" expanded="false" />
-            <element signature="e#15197#15220#0" expanded="false" />
-            <element signature="e#15449#15812#0" expanded="false" />
-            <element signature="e#18905#19035#0" expanded="false" />
-            <element signature="e#19384#20666#1" expanded="false" />
+            <element signature="e#45#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq100-SizSeq6-Win10-lr0.01-mom0.9.png" />
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq1000-SizSeq6-Win10-lr0.015-mom0.7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq1000-SizSeq6-Win50-lr0.015-mom0.01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq1000-SizSeq6-Win100-lr0.015-mom0.01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq1000-SizSeq6-Win10-lr0.015-mom0.01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3_NetRes_NbSeq200000-Win1000-lr0.01-mom0.9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elmanServanSchreiberEtAl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="473" column="56" selection-start-line="473" selection-start-column="56" selection-end-line="473" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elmanClearmansEtMcclelland91.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SemanticGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq200000-Win5000-nbHidU3-lr0.01-mom0.7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0_NetRes_NbSeq200000-Win5000-nbHidU3-lr0.015-mom0.5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="169" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elman91/elmanClearmansEtMcclelland91.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3045">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elman89/elmanServanSchreiberEtAl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7185">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
